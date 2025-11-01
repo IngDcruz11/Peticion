@@ -1,0 +1,91 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden; 
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+button {
+    background-color: #e91e63;
+    font-size: 1.5rem;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    /* z-index base */
+    z-index: 5; 
+}
+
+/* ------------------------------------ */
+/* --- Botón SÍ (💖) --- */
+#yes {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
+}
+
+#yes:hover {
+    background-color: #e91e63;
+}
+
+/* ------------------------------------ */
+/* --- Botón NO (😢) --- */
+#no {
+    /* **MODIFICACIÓN CLAVE:** Le damos un z-index mucho más alto (99) 
+       para asegurar que siempre esté en la capa superior, 
+       incluso cuando el botón SÍ (z-index: 10) crece. */
+    background-color: #999;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    **z-index: 99;** }
+
+#no:hover {
+    background-color: #777;
+    cursor: pointer; 
+}
+/* ------------------------------------ */
+
+/* Mensaje oculto */
+#mensaje {
+    display: none;
+    font-size: 2rem;
+    margin-top: 40px;
+    animation: aparecer 1s ease forwards;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
