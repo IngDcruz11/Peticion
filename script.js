@@ -88,8 +88,7 @@ btnYes.addEventListener("click", () => {
     btnNo.style.display = "none";
     mensaje.style.display = "block";
 
-    // Enviar formulario oculto correctamente
-    document.getElementById("formulario-si").requestSubmit();
+
 });
 
 
@@ -103,3 +102,4 @@ window.addEventListener("resize", () => {
     btnNo.style.left = "";
     btnNo.style.top = "";
 });
+
